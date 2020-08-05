@@ -1,7 +1,7 @@
 {
   "name": "solid",
   "version": "0.1.0",
-  "description": "Dependency inversion playground",
+  "description": "SOLID principles playground",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexnault/solid.git"
