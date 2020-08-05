@@ -1,10 +1,10 @@
 {
-  "name": "dependency-inversion",
+  "name": "solid",
   "version": "0.1.0",
   "description": "Dependency inversion playground",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexnault/dependency-inversion.git"
+    "url": "git+https://github.com/alexnault/solid.git"
   },
   "author": "Alex Nault",
   "license": "MIT",
@@ -13,9 +13,9 @@
     "node": ">=10.0.0"
   },
   "bugs": {
-    "url": "https://github.com/alexnault/dependency-inversion/issues"
+    "url": "https://github.com/alexnault/solid/issues"
   },
-  "homepage": "https://github.com/alexnault/dependency-inversion#readme",
+  "homepage": "https://github.com/alexnault/solid#readme",
   "scripts": {
     "start": "npm run serve",
     "build": "npm run build-ts && npm run lint",
