@@ -18,18 +18,11 @@
   "homepage": "https://github.com/alexnault/solid#readme",
   "scripts": {
     "start": "npm run serve",
-    "build": "npm run build-ts && npm run lint",
+    "build": "tsc && npm run lint",
     "serve": "node dist/server.js",
-    "watch-node": "nodemon dist/server.js",
-    "watch": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run watch-node\"",
     "test": "jest --forceExit --coverage --verbose",
-    "watch-test": "npm run test -- --watchAll",
-    "build-ts": "tsc",
-    "watch-ts": "tsc -w",
-    "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
-    "debug": "npm run build && npm run watch-debug",
-    "serve-debug": "nodemon --inspect dist/server.js",
-    "watch-debug": "concurrently -k -p \"[{name}]\" -n \"TypeScript,Node\" -c \"cyan.bold,green.bold\" \"npm run watch-ts\" \"npm run serve-debug\""
+    "lint": "eslint \"**/*.{js,ts}\" --quiet --fix",
+    "watch": "nodemon --config nodemon.json src/server.ts"
   },
   "dependencies": {
     "@types/uuid": "^8.0.1",
@@ -50,13 +43,13 @@
     "@types/node": "^13.13.9",
     "@typescript-eslint/eslint-plugin": "^2.34.0",
     "@typescript-eslint/parser": "^2.34.0",
-    "concurrently": "^5.3.0",
     "eslint": "^6.8.0",
     "jest": "^25.5.4",
     "nodemon": "^2.0.4",
     "prettier": "2.0.5",
     "ts-jest": "^25.5.1",
     "ts-node": "^8.10.1",
+    "tsconfig-paths": "^3.9.0",
     "typescript": "^3.9.3"
   }
 }
