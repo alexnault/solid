@@ -1,7 +1,7 @@
 import User from "./User";
 import UserRepo from "./UserRepo";
 
-export default class InMemoryUserRepo implements UserRepo {
+export default class SequelizeUserRepo implements UserRepo {
   // constructor() {}
 
   async getUserById(userId: string): Promise<User> {
