@@ -13,6 +13,6 @@ export default class InMemoryUserRepo implements UserRepo {
   }
 
   async getUsers(): Promise<User[]> {
-    return [];
+    return this.users;
   }
 }
