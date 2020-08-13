@@ -1,7 +1,7 @@
 import EntityId from "./EntityId";
 
 export default abstract class Entity<T> {
-  protected readonly id: EntityId;
+  public readonly id: EntityId;
   public readonly props: T;
 
   constructor(props: T, id?: EntityId) {
