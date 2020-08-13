@@ -1,4 +1,4 @@
-import User from "./User";
+import User from "./domain/entities/User";
 import UserRepo from "./UserRepo";
 
 export default class SequelizeUserRepo implements UserRepo {

@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 
-import UserRepo from "./UserRepo";
-import User from "./User";
+import UserRepo from "../repos/UserRepo";
+import User from "../domain/entities/User";
 
 export default class UserController {
   constructor(private userRepo: UserRepo) {}

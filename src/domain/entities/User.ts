@@ -1,5 +1,5 @@
-import Email from "./Email";
-import Username from "./Username";
+import Email from "../valueObjects/Email";
+import Username from "../valueObjects/Username";
 import Entity from "./Entity";
 import EntityId from "./EntityId";
 

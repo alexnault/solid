@@ -1,4 +1,4 @@
-import User from "./User";
+import User from "../domain/entities/User";
 
 export default interface UserRepo {
   // TODO optional User retuned?
