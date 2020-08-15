@@ -1,2 +1,2 @@
-import "./shared/infra/http/server";
+import "./shared/infra/rest/server";
 // import "./shared/infra/persistence/sequelize";
