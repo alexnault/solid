@@ -1,10 +1,11 @@
-import User from "./domain/entities/User";
 import UserRepo from "./UserRepo";
+import User from "../domain/entities/User";
+import EntityId from "../shared/domain/EntityId";
 
 export default class SequelizeUserRepo implements UserRepo {
   // constructor() {}
 
-  async getUserById(userId: string): Promise<User> {
+  async getUserById(userId: EntityId): Promise<User> {
     // TODO implement sequelize findByPk
     throw new Error("Not implemented");
   }

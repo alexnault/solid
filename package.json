@@ -19,10 +19,10 @@
   "scripts": {
     "start": "npm run serve",
     "build": "tsc && npm run lint",
-    "serve": "node dist/server.js",
+    "serve": "node dist/index.js",
     "test": "jest --forceExit --coverage --verbose",
     "lint": "eslint \"**/*.{js,ts}\" --quiet --fix",
-    "watch": "nodemon --config nodemon.json src/server.ts"
+    "watch": "nodemon --config nodemon.json src/index.ts"
   },
   "dependencies": {
     "@types/uuid": "^8.0.1",

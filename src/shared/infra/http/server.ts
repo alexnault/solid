@@ -6,6 +6,9 @@ import bodyParser from "body-parser";
 // import path from "path";
 // import jwt from "jsonwebtoken";
 
+import UserController from "../../../controllers/UserController";
+import InMemoryUserRepo from "../../../repos/InMemoryUserRepo";
+
 // if (fs.existsSync(".env")) {
 //   console.log("Using .env file to supply config environment variables");
 //   dotenv.config({ path: ".env" });
@@ -35,6 +38,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //         autoReconnect: true
 //     })
 // }));
+
+// TODO move
+const userController = new UserController(new InMemoryUserRepo());
+app.get("/users", userController.handleRequest);
 
 // app.use(errorHandler());
 

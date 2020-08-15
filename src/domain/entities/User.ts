@@ -1,7 +1,7 @@
 import Email from "../valueObjects/Email";
 import Username from "../valueObjects/Username";
-import Entity from "./Entity";
-import EntityId from "./EntityId";
+import Entity from "../../shared/domain/Entity";
+import EntityId from "../../shared/domain/EntityId";
 
 interface UserProps {
   firstName: string;

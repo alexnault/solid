@@ -1,4 +1,4 @@
-import ValueObject from "./ValueObject";
+import ValueObject from "../../shared/domain/ValueObject";
 
 export default class Email extends ValueObject<string> {
   private value: string;

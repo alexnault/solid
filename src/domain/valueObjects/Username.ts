@@ -1,4 +1,4 @@
-import ValueObject from "./ValueObject";
+import ValueObject from "../../shared/domain/ValueObject";
 
 export default class Username extends ValueObject<string> {
   public static readonly MIN_LENGTH = 4;
