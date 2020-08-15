@@ -42,6 +42,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // TODO move
 const userController = new UserController(new InMemoryUserRepo());
 app.get("/users", userController.handleRequest);
+app.post("/users/signup", userController.handleRequestCreate);
+// app.delete("/:userId", (req, res) => deleteUserController.execute(req, res));
 
 // app.use(errorHandler());
 

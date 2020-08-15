@@ -14,4 +14,14 @@ export default class SequelizeUserRepo implements UserRepo {
     // TODO implement sequelize findAll
     throw new Error("Not implemented");
   }
+
+  async exists(userId: EntityId): Promise<boolean> {
+    // TODO implement sequelize save
+    throw new Error("Not implemented");
+  }
+
+  async save(user: User): Promise<void> {
+    // TODO implement sequelize save
+    throw new Error("Not implemented");
+  }
 }

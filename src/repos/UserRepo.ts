@@ -5,4 +5,6 @@ export default interface UserRepo {
   // TODO optional User retuned?
   getUserById: (userId: EntityId) => Promise<User>;
   getUsers: () => Promise<User[]>;
+  exists: (userId: EntityId) => Promise<boolean>;
+  save: (user: User) => Promise<void>;
 }
