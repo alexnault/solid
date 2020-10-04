@@ -22,7 +22,7 @@
     "serve": "node dist/index.js",
     "test": "jest --forceExit --coverage --verbose",
     "lint": "eslint \"**/*.{js,ts}\" --quiet --fix",
-    "watch": "nodemon --config nodemon.json src/index.ts"
+    "dev": "nodemon --config nodemon.json src/index.ts"
   },
   "dependencies": {
     "@types/uuid": "^8.0.1",
