@@ -29,19 +29,21 @@ export default class UserController implements ExpressController {
     req: Request,
     res: Response,
     next: NextFunction
-    // ): Promise<Response<void>> => {
-  ): any => {
+  ): Promise<any> => {
     // TODO make it so we don't have to repeat the try catch in every controller
     try {
       const dto = req.body as CreateUserDTO;
-      // TODO move to use case / service
+
       const user = new User({
         firstName: dto.firstName,
         email: new Email(dto.email),
         username: new Username(dto.username),
         password: new Password(dto.password),
       });
-      await this.userRepo.save(user);
+      // await this.userRepo.save(user);
+
+      // TODO createUser(...);
+
       return res.status(200).json({});
     } catch (e) {
       return next(e);

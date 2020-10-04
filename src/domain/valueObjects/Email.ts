@@ -1,7 +1,7 @@
 import ValueObject from "../../shared/domain/ValueObject";
 
 export default class Email extends ValueObject<string> {
-  private value: string;
+  public readonly value: string;
 
   constructor(email: string) {
     super();
