@@ -8,7 +8,7 @@ export default class Password extends ValueObject<string> {
 
   constructor(password: string) {
     super();
-    if (password.length <= Password.MIN_LENGTH) {
+    if (password.length < Password.MIN_LENGTH) {
       throw new Error("Password too short");
     }
     if (password.length > Password.MAX_LENGTH) {
