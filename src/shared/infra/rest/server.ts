@@ -1,18 +1,10 @@
 import express from "express";
 // import session from "express-session";
 import bodyParser from "body-parser";
-// import dotenv from "dotenv";
-// import fs from "fs";
-// import path from "path";
 // import jwt from "jsonwebtoken";
 
 import UserController from "../../../controllers/UserController";
 import InMemoryUserRepo from "../../../repos/InMemoryUserRepo";
-
-// if (fs.existsSync(".env")) {
-//   console.log("Using .env file to supply config environment variables");
-//   dotenv.config({ path: ".env" });
-// }
 
 // if (!process.env.SESSION_SECRET) {
 //   console.log("No client secret. Set SESSION_SECRET environment variable.");
