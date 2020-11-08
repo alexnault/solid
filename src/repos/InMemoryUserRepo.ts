@@ -7,6 +7,25 @@ import Email from "../domain/valueObjects/Email";
 export default class InMemoryUserRepo implements UserRepo {
   private users: User[] = [];
 
+  async exists(userId: EntityId): Promise<boolean> {
+    return !!this.users.find((user) => user.id === userId);
+  }
+
+  async delete(user: User): Promise<void> {
+    this.users = this.users.filter((u) => u.id === user.id);
+  }
+
+  async save(user: User): Promise<void> {
+    const exists = await this.exists(user.id);
+
+    if (!exists) {
+      // TODO toPersistence
+      this.users.push(user);
+      // const rawSequelizeUser = await UserMap.toPersistence(user);
+      // await UserModel.create(rawSequelizeUser);
+    }
+  }
+
   async getUsers(): Promise<User[]> {
     return this.users;
   }
@@ -21,21 +40,6 @@ export default class InMemoryUserRepo implements UserRepo {
 
   async getUserByUsername(username: Username): Promise<User> {
     return this.users.find((user) => user.username.value === username.value);
-  }
-
-  async exists(userId: EntityId): Promise<boolean> {
-    return !!this.users.find((user) => user.id === userId);
-  }
-
-  async save(user: User): Promise<void> {
-    const exists = await this.exists(user.id);
-
-    if (!exists) {
-      // TODO toPersistence
-      this.users.push(user);
-      // const rawSequelizeUser = await UserMap.toPersistence(user);
-      // await UserModel.create(rawSequelizeUser);
-    }
   }
 }
 

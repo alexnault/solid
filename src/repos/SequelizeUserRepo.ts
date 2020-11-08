@@ -6,6 +6,22 @@ import Username from "../domain/valueObjects/Username";
 
 export default class SequelizeUserRepo implements UserRepo {
   // constructor() {}
+
+  async exists(userId: EntityId): Promise<boolean> {
+    // TODO implement sequelize save
+    throw new Error("Not implemented");
+  }
+
+  async delete(user: User): Promise<void> {
+    // TODO implement sequelize destroy
+    throw new Error("Not implemented");
+  }
+
+  async save(user: User): Promise<void> {
+    // TODO implement sequelize save
+    throw new Error("Not implemented");
+  }
+
   async getUsers(): Promise<User[]> {
     // TODO implement sequelize findAll
     throw new Error("Not implemented");
@@ -23,16 +39,6 @@ export default class SequelizeUserRepo implements UserRepo {
 
   async getUserByUsername(username: Username): Promise<User> {
     // TODO implement sequelize find
-    throw new Error("Not implemented");
-  }
-
-  async exists(userId: EntityId): Promise<boolean> {
-    // TODO implement sequelize save
-    throw new Error("Not implemented");
-  }
-
-  async save(user: User): Promise<void> {
-    // TODO implement sequelize save
     throw new Error("Not implemented");
   }
 }
